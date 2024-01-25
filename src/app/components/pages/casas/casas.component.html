@@ -1,0 +1,15 @@
+<app-nav-casas [listaCasas]="listaCasas" (casaSeleccionada)="mostrarCasa($event)"></app-nav-casas>
+<section class="container-casas">
+    <article *ngIf="casaMostrada">
+        <p>Escudo:</p>
+        <img src="{{casaMostrada.picture}}" alt="">
+    </article>
+    <article *ngIf="casaMostrada">
+        <p>Fundador:</p>
+        <h2>{{ casaMostrada.fundador }}</h2>
+    </article>
+    <article *ngIf="casaMostrada">
+        <p>Reliquia</p>
+        <img [attr.src]="getImagenPath(casaMostrada.nombre)" alt="" *ngIf="casaMostrada">
+    </article>
+</section>

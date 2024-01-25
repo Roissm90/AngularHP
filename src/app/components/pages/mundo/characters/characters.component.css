@@ -1,0 +1,119 @@
+h2 {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  font-weight: bold;
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.7803921569);
+  border-radius: 15px;
+  border: 1px solid #000;
+}
+
+div.container-boxes {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+div.container-boxes > article.cardBox {
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  border: 1px solid #000;
+  background-color: rgba(255, 255, 255, 0.7803921569);
+}
+div.container-boxes > article.cardBox:hover > .card {
+  transform: rotateY(180deg);
+}
+div.container-boxes > article.cardBox > div.card {
+  cursor: pointer;
+  height: 300px;
+  transform-style: preserve-3d;
+  transition: transform 1s ease 0s;
+  width: 100%;
+  animation: giro 1s 1;
+}
+@keyframes giro {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+div.container-boxes > article.cardBox > div.card > div.front, div.container-boxes > article.cardBox > div.card > div.back {
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  display: block;
+  font-size: 1.2em;
+  height: 100%;
+  padding: 0.8em;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+div.container-boxes > article.cardBox > div.card > div.back {
+  transform: rotateY(180deg);
+  border-radius: 15px;
+}
+div.container-boxes > article.cardBox > div.card > div.back > ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  border-radius: 15px;
+  padding: 10px;
+}
+div.container-boxes > article.cardBox > div.card > div.back > ul.Gryffindor {
+  background-color: rgba(116, 0, 2, 0.8431372549);
+}
+div.container-boxes > article.cardBox > div.card > div.back > ul.Gryffindor > li {
+  color: #d3a625;
+}
+div.container-boxes > article.cardBox > div.card > div.back > ul.Ravenclaw {
+  background-color: rgba(14, 26, 64, 0.8431372549);
+}
+div.container-boxes > article.cardBox > div.card > div.back > ul.Ravenclaw > li {
+  color: #946b2d;
+}
+div.container-boxes > article.cardBox > div.card > div.back > ul.Hufflepuff {
+  background-color: rgba(236, 185, 57, 0.8431372549);
+}
+div.container-boxes > article.cardBox > div.card > div.back > ul.Hufflepuff > li {
+  color: #372e29;
+}
+div.container-boxes > article.cardBox > div.card > div.back > ul.Slytherin {
+  background-color: rgba(26, 71, 42, 0.8431372549);
+}
+div.container-boxes > article.cardBox > div.card > div.back > ul.Slytherin > li {
+  color: #aaaaaa;
+}
+div.container-boxes > article.cardBox > div.card > div.back > ul > li {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+div.container-boxes > article.cardBox > div.card > div.front {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+div.container-boxes > article.cardBox > div.card > div.front > h4 {
+  width: 80%;
+  padding: 5px 0;
+  border-bottom: 1px solid #000;
+  font-weight: bold;
+}
+div.container-boxes > article.cardBox > div.card > div.front > img {
+  width: 200px;
+  height: 200px;
+}/*# sourceMappingURL=characters.component.css.map */

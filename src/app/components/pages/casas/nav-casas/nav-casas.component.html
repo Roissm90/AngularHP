@@ -1,0 +1,5 @@
+<nav class="container-list-houses">
+    <ul>
+        <li *ngFor="let casa of listaCasas" (click)="seleccionarCasa(casa)">{{casa.nombre}}</li>
+    </ul>
+</nav>

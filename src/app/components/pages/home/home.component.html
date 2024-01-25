@@ -1,0 +1,16 @@
+
+<main class="container-section-books">
+    <section *ngFor="let libro of listaLibros; let index = index" class="container__books" [ngClass]="{'reverse': index % 2 !== 0}">
+        <h2>{{libro.titulo}}</h2>
+        <div class="container__book" [ngClass]="{'reverse': index % 2 !== 0}">
+            <div class="container__photo">
+                <img src="{{libro.picture}}" alt="portada del libro">
+            </div>
+
+            <ul>
+                <li><span>Año:</span><span>{{libro.anio}}</span></li>
+                <li><span>Sinopsis:</span><span>{{libro.sinopsis}}</span></li>
+            </ul>
+        </div>
+    </section>
+</main>

@@ -1,0 +1,36 @@
+  <div class="container-search">
+    <div class="search__name">
+      <img src="../../../../../assets/images/search.png" alt="">
+      <input type="text" name="character" id="character" placeholder="Busca tu personaje" [(ngModel)]="searchTerm">
+    </div>
+    <div class="search__house">
+      <button *ngFor="let casa of listaCasas" (click)="filterByHouse(casa.nombre)">
+        <img *ngIf="casa.nombre === 'Gryffindor'" src="../../../../../assets/images/gryffindor-1-removebg-preview.png" alt="">
+        <img *ngIf="casa.nombre === 'Slytherin'" src="../../../../../assets/images/slytherin-1-removebg-preview.png" alt="">
+        <img *ngIf="casa.nombre === 'Ravenclaw'" src="../../../../../assets/images/ravenclaw-1-removebg-preview.png" alt="">
+        <img *ngIf="casa.nombre === 'Hufflepuff'" src="../../../../../assets/images/hufflepuff-1-removebg-preview.png" alt="">
+      </button>
+      <button (click)="filterByHouse('')"><img src="../../../../../assets/images/reset.png" alt=""></button>
+    </div>
+  </div>
+  
+  <div class="container-boxes">
+    <article class="cardBox" *ngFor="let character of filterCharacters()">
+        <div class="card">
+          <div class="front">
+            <h4>{{character.nombre}}</h4>
+            <img src="{{character.picture}}" alt="">
+          </div>
+          <div class="back" [ngClass]="(character.casaNombre ?? character.sangreTipo)">
+            <!-- <ul >
+                <li *ngIf="character.casaNombre">Casa: {{character.casaNombre}}</li>
+                <li>Agrupación: {{character.agrupacion}}</li>
+                <li>Sangre: {{character.sangreTipo}}</li>
+                <li>Forma del Patronus: {{character.patronus}}</li>
+                <li *ngIf="character.horrocruxes.length > 0">Horrocruxes: {{character.horrocruxes.join(', ')}}</li>
+            </ul> -->
+            <a [routerLink]="'/detalle/' + character._id">Ver más</a>
+          </div>
+        </div>
+    </article>
+  </div>

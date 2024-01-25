@@ -1,0 +1,10 @@
+section.container-characters {
+    width: 100%;
+    height: calc(100vh - 160px);
+
+    overflow-y: scroll;
+
+    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("../../../../assets/images/hogwartsdia.jpeg");
+    background-size: cover;
+    background-position: center;
+}

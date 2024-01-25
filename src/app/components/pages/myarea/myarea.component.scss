@@ -1,0 +1,67 @@
+section.container-my-area {
+    width: 100%;
+    height: calc(100vh - 160px);
+
+    overflow-y: scroll;
+
+    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url("../../../../assets/images/techo.jpeg");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    > div.container-user {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+
+    > div.created-wand {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 15px;
+
+        > h3 {
+            width: 90%;
+            text-align: center;
+            padding: 30px 0 0;
+            color: #fff;
+            border-bottom: 1px solid #fff;
+        }
+
+        > ul {
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+
+            background-image: url("../../../../assets/images/wand.png");
+            background-size: cover;
+            background-position: center;
+
+            padding: 30px;
+
+            > li {
+                color: #fff;
+            }
+        }
+
+        > a {
+            padding: 20px;
+            color: #fff;
+        }
+    }
+}

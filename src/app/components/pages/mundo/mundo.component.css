@@ -1,0 +1,8 @@
+section.container-characters {
+  width: 100%;
+  height: calc(100vh - 200px);
+  overflow-y: scroll;
+  background-image: url("../../../../assets/images/techo.jpeg");
+  background-size: contain;
+  background-position: center;
+}/*# sourceMappingURL=mundo.component.css.map */

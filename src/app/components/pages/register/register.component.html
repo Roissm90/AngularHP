@@ -1,0 +1,52 @@
+<section class="container-forms">
+    <div class="container-login" [ngClass]="{ 'hidden': !showLogin }">
+        <h2>Login</h2>
+        <form action="" class="login-user" (ngSubmit)="login()">
+            <label for="emailLogin">
+                <span>Email:</span>
+                <input type="email" id="emailLogin" name="emailLogin" placeholder="Ej: xxxxxxxx@gmail.com" [(ngModel)]="emailLogin" required>
+            </label>
+            <label for="passwordLogin">
+                <span>Contraseña:</span>
+                <img (click)="togglePassword()" src="../../../../assets/images/show-password.png" alt="">
+                <input [type]="showPassword ? 'text' : 'password'" name="passwordLogin" id="passwordLogin" [(ngModel)]="passwordLogin" required>
+            </label>
+            <button type="submit">Conectarse</button>
+        </form>
+        <button class="change-form" (click)="toggleForms()" (click)="togglePassword()">No tengo cuenta</button>
+    </div>
+    
+    <div class="container-register" [ngClass]="{ 'visible': showRegister }">
+        <h2>Registro</h2>
+        <form action="" class="register-user" (ngSubmit)="register()">
+            <label for="nameRegister">
+                <span>Nombre:</span>
+                <input type="text" id="nameRegister" placeholder="Ej: Sergio" name="nameRegister" [(ngModel)]="nameRegister" required="required">
+            </label>
+            <label for="lastnameRegister">
+                <span>Apellidos:</span>
+                <input type="text" id="lastnameRegister" placeholder="Ej: González Pérez" name="lastnameRegister" [(ngModel)]="lastnameRegister" required="required">
+            </label>
+            <label for="emailRegister">
+                <span>Email:</span>
+                <input type="email" id="emailRegister" placeholder="Ej: xxxxxxxx@gmail.com" name="emailRegister" [(ngModel)]="emailRegister" required="required">
+            </label>
+            <label for="sexoRegister">
+                <span>Sexo:</span>
+                <select name="sexoRegister" id="sexoRegister" [(ngModel)]="sexoRegister">
+                    <option value="">Elije:</option>
+                    <option value="Hombre">Hombre</option>
+                    <option value="Mujer">Mujer</option>
+                </select>
+            </label>
+            <label for="passwordRegister">
+                <span>Contraseña:</span>
+                <img src="../../../../assets/images/show-password.png" alt="" (click)="togglePassword()">
+                <input [type]="showPassword ? 'text' : 'password'" id="passwordRegister" name="passwordRegister" [(ngModel)]="passwordRegister" required="required">
+            </label>
+            
+            <button type="submit">Registrarse</button>
+        </form>
+        <button class="change-form" (click)="toggleForms()" (click)="togglePassword()">Ya tengo cuenta</button>
+    </div>
+</section>

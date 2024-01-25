@@ -1,0 +1,60 @@
+<section class="container-create" *ngFor="let materiales of listaMateriales">
+    <h2>Crea tu varita</h2>
+
+    <div class="container__materials-wand">
+
+        <div class="container__choose-materials">
+            <label for="madera">
+                <h4>Escoge la madera</h4>
+                <select name="madera" id="madera" [(ngModel)]="selectedMadera">
+                    <option value="">Elije:</option>
+                    <option value="{{madera}}" *ngFor="let madera of materiales.madera">{{madera}}</option>
+                </select>
+            </label>
+    
+            <label for="nucleo">
+                <h4>Escoge el núcleo</h4>
+                <select name="nucleo" id="nucleo" [(ngModel)]="selectedNucleo">
+                    <option value="">Elije:</option>
+                    <option value="{{nucleo}}" *ngFor="let nucleo of materiales.nucleo">{{nucleo}}</option>
+                </select>
+            </label>
+    
+            <label for="longitud">
+                <h4>Longitud</h4>
+                <select name="longitud" id="longitud" [(ngModel)]="selectedLongitud">
+                    <option value="">Elije:</option>
+                    <option value="{{longitud}}" *ngFor="let longitud of materiales.longitud">{{longitud}}</option>
+                </select>
+            </label>
+    
+            <label for="flexibilidad">
+                <h4>Flexibilidad</h4>
+                <select name="flexibilidad" id="flexibilidad" [(ngModel)]="selectedFlexibilidad">
+                    <option value="">Elije:</option>
+                    <option value="{{flexibilidad}}" *ngFor="let flexibilidad of materiales.flexibilidad">{{flexibilidad}}</option>
+                </select>
+            </label>
+        </div>
+
+        <div class="container__wand">
+            <ul class="material-list">
+                <li class="material-item">
+                    <span>Madera: </span> <span>{{selectedMadera}}</span>
+                </li>
+                <li class="material-item">
+                    <span>Núcleo: </span> <span>{{selectedNucleo}}</span>
+                </li>
+                <li class="material-item">
+                    <span>Longitud: </span><span>{{selectedLongitud}} cm</span>
+                </li>
+                <li class="material-item">
+                    <span>Flexibilidad: </span> <span>{{selectedFlexibilidad}}</span>
+                </li>
+            </ul>
+            <button (click)="enviarDatos()">Enviar</button>
+        </div>
+    
+    </div>
+
+</section>

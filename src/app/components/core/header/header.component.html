@@ -1,0 +1,19 @@
+<header class="container-h1-nav">
+    <div class="container-title">
+        <img src="../../../../assets/images/hogwartsSilueta.jpg" alt="">
+        <h1><a [routerLink]="['/']">Hogwarts</a></h1>
+        <img src="../../../../assets/images/hogwartsSilueta.jpg" alt="">
+    </div>
+    <nav class="nav-menu" [ngClass]="downMenu ? 'visible' : '' ">
+        <ul>
+            <li (click)="showMenu()"><a [routerLink]="['/mundomagico']">Personajes</a></li>
+            <li (click)="showMenu()"><a [routerLink]="['/casas']">Casas</a></li>
+            <li (click)="showMenu()"><a [routerLink]="['/varita']">Tu varita</a></li>
+            <li (click)="showMenu()"><a [routerLink]="['/login']">Sign Up</a></li>
+            <li (click)="showMenu()"><a [routerLink]="['/miarea']">Mi área</a></li>
+        </ul>
+    </nav>
+    <div class="container-toggle-menu" (click)="showMenu()">
+        <img src="../../../../assets/images/toggle-menu.png" alt="">
+    </div>
+</header>

@@ -1,0 +1,37 @@
+<section class="container-character" *ngFor="let casa of personajeId.casa">
+    <div class="container__name-photo" [ngClass]="casa.nombre">
+        <h2>{{personajeId.nombre}}</h2>
+        <img src="{{personajeId.picture}}" alt="">
+        <h2 *ngFor="let casa of personajeId.casa">{{casa.nombre}}</h2>
+    </div>
+    
+    <ul class="list-character" [ngClass]="casa.nombre">
+        <li class="item-list">
+            <ul class="apariciones-list">
+                <h4>Apariciones:</h4>
+                <div>
+                    <li *ngFor="let aparicion of personajeId.apariciones" class="aparicion-item">
+                        <span>{{aparicion.titulo}}</span>
+                        <img src="{{aparicion.picture}}" alt="">
+                    </li>
+                </div>
+            </ul>
+        </li>
+        <div [ngClass]="getExpanded()">
+            <li class="item-list"><span>Agrupación: </span> <span>{{personajeId.agrupacion}}</span></li>
+            <li class="item-list"><span>Forma del Patronus: </span> <span>{{personajeId.patronus}}</span></li>
+            <li class="item-list"><span>Rol: </span> <span>{{personajeId.rol}}</span></li>
+            <li class="item-list"><span>Status de sangre: </span> <span>{{personajeId.sangreTipo}}</span></li>
+        </div>
+        
+        <li *ngIf="personajeId.horrocruxes.length > 0" class="item-list">
+            <ul class="horrocrux-list">
+                <h4>Horrocruxes:</h4>
+                <div>
+                    <li *ngFor="let horrocrux of personajeId.horrocruxes" class="horrocrux-item">{{horrocrux}}</li>
+                </div>
+            </ul>
+        </li>
+        
+    </ul>
+</section>

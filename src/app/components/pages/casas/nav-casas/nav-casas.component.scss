@@ -1,0 +1,33 @@
+nav.container-list-houses {
+    width: 100%;
+    height: 60px;
+
+    background-color: #000;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        color: #000;
+
+        > li {
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 15px;
+            border-bottom: 5px solid #858585;
+            transition: 0.3s;
+            background-color: #ffffff;
+
+            &:hover {
+                border-bottom-width: 0;
+                transform: translateY(5px);
+            }
+        }
+    }
+}

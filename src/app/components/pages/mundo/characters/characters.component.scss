@@ -1,0 +1,247 @@
+div.container-search {
+  width: 100%;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  padding: 20px;
+
+  > div.search__name {
+    width: 200px;
+    position: relative;
+
+    > img {
+      width: 20px;
+      height: 20px;
+
+      position: absolute;
+      top: 50%;
+      left: 10px;
+
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+
+    > input {
+      width: 100%;
+
+      font-weight: bold;
+      color: #000;
+      background-color: #ffffffc7;
+      padding: 5px;
+      border: none;
+      outline: none;
+      padding-left: 40px;
+    }
+  }
+
+  > div.search__house {
+    width: 300px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    > button {
+      width: 30px;
+      height: 30px;
+
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+
+      &:hover {
+        transition: all ease 0.5s;
+        transform: scale(2);
+      }
+
+      > img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+  
+
+
+div.container-boxes {
+    width: 100%;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+    //padding-top: 50px;
+
+    > article.cardBox {
+        width: 60%;
+        max-width: 250px;
+        height: 300px;
+
+        &:hover {
+            > .card {
+                transform: rotateY(180deg);
+            }
+        }
+
+        > div.card {
+            cursor: pointer;
+            height: 300px;
+            transform-style: preserve-3d;
+            transition: transform 1s ease 0s;
+            width: 100%;
+            -webkit-animation: giro 1s 1;
+            animation: giro 1s 1;
+
+            @keyframes giro {
+                from {
+                  transform: rotateY( 180deg);
+                }
+                to {
+                  transform: rotateY( 0deg);
+                }
+              }
+              
+              @-webkit-keyframes giro {
+                from {
+                  transform: rotateY( 180deg);
+                }
+                to {
+                  transform: rotateY( 0deg);
+                }
+              }
+
+            > div.front, > div.back {
+                backface-visibility: hidden;
+                box-sizing: border-box;
+                display: block;
+                font-size: 1.2em;
+                height: 100%;
+                padding: 0.8em;
+                position: absolute;
+                text-align: center;
+                width: 100%;
+
+                
+            }
+
+            > div.back {
+                transform: rotateY( 180deg);
+                border-radius: 15px;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                &.Gryffindor {
+                  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../../../../../assets/images/gryffindor-1-removebg-preview.png');
+                  //background-image: url('../../../../../assets/images/gryffindor-1-removebg-preview.png');
+                  background-size: contain;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  filter: invert(1);
+                }
+                &.Ravenclaw {
+                  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../../../../../assets/images/ravenclaw-1-removebg-preview.png');
+                  //background-image: url('../../../../../assets/images/ravenclaw-1-removebg-preview.png');
+                  background-size: contain;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  filter: invert(1);
+                  
+                }
+                &.Hufflepuff {
+                  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../../../../../assets/images/hufflepuff-1-removebg-preview.png');
+                  //background-image: url('../../../../../assets/images/hufflepuff-1-removebg-preview.png');
+                  background-size: contain;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  filter: invert(1);
+                }
+                &.Slytherin {
+                  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../../../../../assets/images/slytherin-1-removebg-preview.png');
+                  //background-image: url('../../../../../assets/images/slytherin-1-removebg-preview.png');
+                  background-size: contain;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  filter: invert(1);
+                }
+
+                &.Squib {
+                  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+                  filter: invert(1);
+                }
+                
+
+                // > ul {
+                //     width: 100%;
+                //     height: 100%;
+
+                //     display: flex;
+                //     flex-direction: column;
+                //     justify-content: space-around;
+                //     align-items: flex-start;
+
+                //     border-radius: 15px;
+                //     padding: 10px;
+
+                    
+
+                //     > li {
+                //       width: 100%;
+
+                //       text-align: left;
+                //       display: flex;
+                //       justify-content: flex-start;
+                //       align-items: center;
+
+                //       color: #000;
+                //     }
+                // }
+
+                > a {
+                  font-weight: bold;
+                  color:#000;
+
+                  &:hover {
+                    transform: scale(1.5);
+                    transition: all ease 0.5s;
+                  }
+                }
+            }
+
+            > div.front {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+
+                background-color: #00000098;
+                border-radius: 15px;
+
+                > h4 {
+                  width: 100%;
+                  padding-bottom: 3px;
+                  border-bottom: 1px solid #fff;
+                  font-weight: bold;
+                  color: #fff;
+                }
+
+                > img {
+                    width: 150px;
+                    height: 160px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+footer.container-media-links {
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #000;
+
+    > ul {
+        width: 100%;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        > li {
+            width: 70px;
+            height: 20px;
+
+            background-color: #fff;
+
+            > a {
+                width: 100%;
+                height: 100%;
+                
+                > img {
+                    width: 100%;
+                    height: 100%;
+                    
+                }
+            }
+        }
+    }
+}

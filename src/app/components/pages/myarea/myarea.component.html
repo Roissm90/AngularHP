@@ -1,0 +1,27 @@
+<section class="container-my-area">
+
+    <div class="container-user">
+        <h2>
+            <span>{{ user.sexo.toLowerCase() === 'hombre' ? 'Bienvenido' : user.sexo.toLowerCase() === 'mujer' ? 'Bienvenida' : 'Bienvenid@' }} </span>
+
+            <span>{{ user.name }} {{ user.lastname }}</span>
+        </h2>
+          
+        <button (click)="logout()">Cerrar sesión</button>
+    </div>
+
+    <div class="created-wand" *ngIf="materiales.madera && materiales.nucleo && materiales.nucleo && materiales.flexibilidad">
+        <h3>Tu varita</h3>
+        <ul>
+            <li>{{materiales.madera}}</li>
+            <li>{{materiales.nucleo}}</li>
+            <li>{{materiales.longitud}}</li>
+            <li>{{materiales.flexibilidad}}</li>
+        </ul>
+    </div>
+
+    <div class="created-wand" *ngIf="!materiales.madera || !materiales.nucleo || !materiales.longitud || !materiales.flexibilidad">
+        <a [routerLink]="['/varita']">Crea tu propia varita en la sección "Tu varita"</a>
+    </div>
+    
+</section>

@@ -1,0 +1,74 @@
+section.container-create {
+    width: 100%;
+    height: calc(100vh - 160px);
+
+    overflow-y: scroll;
+    padding: 50px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("../../../../assets/images/hogwartsnoche.jpeg");
+    background-size: cover;
+    background-position: center;
+
+    > div.container__materials-wand {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        > div.container__choose-materials {
+            width: 100%;
+            max-width: 300px;
+
+            padding: 20px 0;
+
+            > label {
+
+                > h4 {
+                    padding: 5px 0;
+                    color: #fff;
+                }
+                > select {
+                    width: 200px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        > div.container__wand {
+            width: 100%;
+            max-width: 300px;
+
+            background-image: url('../../../../assets/images/wand.png');
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            > ul {
+                > li {
+                    padding: 5px 0;
+                    > span {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-height: 700px) {
+    section.container-create {
+        div.container__materials-wand {
+            flex-direction: column;
+            justify-content: space-around
+        }
+    }
+}

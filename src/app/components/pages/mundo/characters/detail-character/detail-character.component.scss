@@ -1,0 +1,217 @@
+section.container-character {
+    width: 100%;
+    height: calc(100vh - 160px);
+
+    overflow-y: scroll;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+
+    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("../../../../../../assets/images/hogwartsdia.jpeg");
+    background-size: cover;
+    background-position: center;
+
+    > div.container__name-photo {
+        width: 100%;
+        max-width: 280px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+
+        padding: 40px 20px;
+        border-radius: 15px;
+        filter: invert(1);
+
+        &.Gryffindor {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../../../../../../assets/images/gryffindor-1-removebg-preview.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        &.Hufflepuff {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../../../../../../assets/images/hufflepuff-1-removebg-preview.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        &.Ravenclaw {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../../../../../../assets/images/ravenclaw-1-removebg-preview.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        &.Slytherin {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../../../../../../assets/images/slytherin-1-removebg-preview.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        > img {
+            filter: invert(1);
+            width: 100%;
+        }
+    }
+
+    > ul.list-character {
+        width: 100%;
+        max-width: 400px;
+        
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 30px;
+
+        padding: 20px;
+        border-radius: 15px;
+
+        filter: invert(1);
+
+        &.Gryffindor {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../../../../../../assets/images/gryffindor-1-removebg-preview.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        &.Hufflepuff {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../../../../../../assets/images/hufflepuff-1-removebg-preview.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        &.Ravenclaw {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../../../../../../assets/images/ravenclaw-1-removebg-preview.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        &.Slytherin {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../../../../../../assets/images/slytherin-1-removebg-preview.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        > li.item-list {
+            width: 100%;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+
+            > ul.apariciones-list {
+                width: 100%;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+
+                > h4 {
+                    width: 100%;
+                    text-align: center;
+                    font-weight: bold;
+                    border-bottom: 2px solid #000;
+                }
+
+                > div {
+                    width: 100%;
+                    height: 150px;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 20px;
+
+                    overflow-y: scroll;
+                    padding: 20px 10px;
+                    
+                    > li.aparicion-item {
+                        width: 100%;
+                        
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        gap: 5px;
+    
+                        > span {
+                            color:#000;
+                            font-weight: bold;
+                        }
+    
+                        > img {
+                            width: 80px;
+                            height: 100px;
+                            filter: invert(1);
+                        }
+                    }
+                }
+            }
+
+            > ul.horrocrux-list {
+                width: 100%;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+
+                > h4 {
+                    width: 100%;
+                    text-align: center;
+                    font-weight: bold;
+                    border-bottom: 2px solid #000;
+                }
+
+                > div {
+                    width: 100%;
+                    height: 150px;
+                    overflow-y: scroll;
+
+                    > li.horrocrux-item {
+                        padding-top: 10px;
+                        
+                    }
+                }
+                
+            }
+        }
+
+        > div {
+            width: 100%;
+
+            &.expanded {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 30px;
+            }
+
+            > li.item-list {
+                > span:first-child {
+                    font-weight: bold;
+                    font-size: larger;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-height: 900px) {
+    section.container-character {
+        flex-direction: column;
+        align-items: center;
+    }
+}

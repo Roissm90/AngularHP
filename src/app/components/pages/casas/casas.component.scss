@@ -1,0 +1,58 @@
+section.container-casas {
+    width: 100%;
+    height: calc(100vh - 220px);
+    overflow-y: scroll;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 50px;
+
+    background-image: linear-gradient(rgba(0, 0,0, 0.6), rgba(0, 0, 0, 0.6)), url('../../../../assets/images/escudo.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    > article {
+        width: 100%;
+        max-width: 300px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+
+        transition: all ease 0.5s;
+
+        > p {
+            width: 90%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-bottom: 1px solid;
+            font-weight: bold;
+            font-size: 20px;
+            color: #fff;
+        }
+
+        > img {
+            width: 250px;
+            height: 250px;
+        }
+
+        > h2 {
+            width: 250px;
+            height: 250px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: #fff;
+        }
+    }
+}
