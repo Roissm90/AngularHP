@@ -21,7 +21,7 @@
             <h4>{{character.nombre}}</h4>
             <img src="{{character.picture}}" alt="">
           </div>
-          <div class="back" [ngClass]="(character.casaNombre ?? character.sangreTipo)">
+          <div class="back" [ngClass]="(character.casaNombre || character.sangreTipo)">
             <!-- <ul >
                 <li *ngIf="character.casaNombre">Casa: {{character.casaNombre}}</li>
                 <li>Agrupación: {{character.agrupacion}}</li>
